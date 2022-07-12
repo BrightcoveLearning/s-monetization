@@ -190,7 +190,12 @@
         At the bottom of the <strong>Quick Edit</strong> section, click the <strong>Save</strong> button.
       </li>
     </ol>
+    {% if site.product_short == "Beacon" %}
+    <p>The videos will automatically be ingested into Beacon.</p>
+    {% endif %}
   </section>
+
+  {% if site.product_short == "Beacon Classic" %}
   <section class="bcls-section">
     <h2 id="Ingesting_the_videos_into_Brightcove_Beacon"> Ingesting the videos into Brightcove Beacon </h2>
     <p>
@@ -209,7 +214,8 @@
       </li>
     </ol>
     <p>
-      For more details on the actions taken in this section, see the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/tools.html">Using the Tools</a> document.
+      For more details on the actions taken in this section, see the <a href="/using-brightcove-beacon/tools.html">Using the Tools</a> document.
     </p>
   </section>
+  {% endif %}
 </article>
