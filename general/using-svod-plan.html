@@ -5,13 +5,53 @@
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>
-      An SVOD Plan defines how a particular set of videos can be purchased by your apps' customers. The SVOD plan must be created in Brightcove Beacon, and is detailed in the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document. Also crucial in the use of the SVOD plan are the Video Cloud custom fields created for videos in a Video Cloud account, as detailed in the
-      <a href="/monetization/general/vc-custom-fields.html"> Creating Video Cloud Custom Fields
-      </a> document. Specifically, the <a href="/monetization/general/vc-custom-fields.html#Rights_Management_fields"> Rights Management fields
-      </a>
-      will be used.
+      An SVOD Plan defines how a particular set of videos can be purchased by your apps' customers. The SVOD plan must be created in Brightcove Beacon Classic, and is detailed in the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document. {% if site.product_short == "Beacon Classic" %}
+      Also crucial in the use of the SVOD plan are the Video Cloud custom fields created for videos in a Video Cloud account, as detailed in the <a href="/monetization/general/vc-custom-fields.html"> Creating Video Cloud Custom Fields</a> document. Specifically, the <a href="/monetization/general/vc-custom-fields.html#Rights_Management_fields"> Rights Management fields</a> are be used.
+      {% endif %}
     </p>
   </section>
+
+  {% if site.product_short == "Beacon" %}
+  <section class="bcls-section">
+    <h2 id="Assigning_plans_in_Beacon_Studio">Assigning plans in Beacon Studio</h2>
+    <p>You can use the Beacon Studio to associate SVOD plans with media content.</p>
+    <p>These steps walk through adding a SVOD plan to a movie, but the process is similar for other asset types.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>Login to Beacon Studio and select a video.</p>
+        <ol>
+          <li>In the left navigation, select <strong>Media</strong></li>
+          <li>Click on the <strong>Name</strong> of a video</li>
+        </ol>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/using-tvod-plan/media-module.png" alt="Media module">
+        </figure>
+      </li>
+      <li>
+        <p>Select <strong>Availability</strong> and either edit or create a <strong>Rule Set</strong>.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/using-tvod-plan/edit-rule-set.png" alt="Edit rule set">
+        </figure>
+      </li>
+      <li>
+        <p>Scroll down to the <strong>Monetization</strong> section.</p>
+        <ol>
+          <li>Expand the <strong>Monetization</strong> dropdown menu and select <strong>SVOD</strong></li>
+          <li>
+            <p>Enter the SVOD plan name. You will have created this in Beacon Classic.</p>
+            <p>To learn how to create SVOD plans, see the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document.</p>
+          </li>
+        </ol>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/using-subscription-package/svod-plan.png" alt="SVOD plan name">
+        </figure>
+      </li>
+      <li>Click <strong>Save</strong>.</li>
+
+    </ol>
+  </section>
+
+  {% elsif site.product_short == "Beacon Classic" %}
   <section class="bcls-section">
     <h2 id="Understanding_the_rights_management_custom_fields"> Understanding the rights management custom fields </h2>
     <p>The rights management custom fields consist of:</p>
@@ -44,7 +84,7 @@
       <img class="bcls-image" src="/assets/images/s-monetization-img/using-subscription-package/index-of-rights-fields.png" alt="index of rights fields" />
     </figure>
     <p>
-      To summarize, for each package you wish to use you will need to create a "counter" set of rights management fields.
+      To summarize, for each package you wish to use you need to create a "counter" set of rights management fields.
     </p>
   </section>
   <section class="bcls-section">
@@ -191,11 +231,10 @@
       </li>
     </ol>
     {% if site.product_short == "Beacon" %}
-    <p>The videos will automatically be ingested into Beacon.</p>
+    <p>The videos are automatically be ingested into Beacon.</p>
     {% endif %}
   </section>
 
-  {% if site.product_short == "Beacon Classic" %}
   <section class="bcls-section">
     <h2 id="Ingesting_the_videos_into_Brightcove_Beacon"> Ingesting the videos into Brightcove Beacon </h2>
     <p>
